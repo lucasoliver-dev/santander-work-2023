@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Santander Dev Week 2023 Java API
 
 RESTful API da Santander Dev Week 2023 construída em Java 17 com Spring Boot 3.
@@ -64,3 +65,46 @@ Esta API ficará disponível no Railway por um período de tempo limitado, mas e
 Aos interessados no desenvolvimento da tela inicial do App do Santander (Figma) em Angular, Android, iOS ou Flutter... Caso a URL produtiva não esteja mais disponível, deixamos um Backup no GitHub Pages, é só dar um GET lá 😘
 - URL de Produção: https://sdw-2023-prd.up.railway.app/users/1
 - Mock (Backup): https://digitalinnovationone.github.io/santander-dev-week-2023-api/mocks/find_one.json
+=======
+# Santander Work 2023
+java restful api criada para santander dev week
+
+##Diagrama de classes
+```mermaid
+classDiagram
+  class User {
+    - name: String
+    - account: Account
+    - features: Feature[]
+    - card: Card
+    - news: News[]
+  }
+
+  class Account {
+    - number: String
+    - agency: String
+    - balance: Double
+    - limit: Double
+  }
+
+  class Feature {
+    - icon: String
+    - description: String
+  }
+
+  class Card {
+    - number: String
+    - limit: Double
+  }
+
+  class News {
+    - icon: String
+    - description: String
+  }
+
+  User"1" <-- "1"Account : has
+  User"1" <-- "1..N" Feature : has many
+  User"1" <-- "1"Card : has one
+  User"1" --> "1"News : has many
+```
+>>>>>>> origin/master
